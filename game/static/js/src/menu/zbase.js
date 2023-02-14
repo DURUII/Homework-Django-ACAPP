@@ -49,43 +49,4 @@ class AcGameMenu {
     hide() {
         this.$menu.hide();
     }
-}class AcGamePlayGround {
-    constructor(root) {
-        this.root = root;
-        this.$playground = $(`
-<div>这是游戏界面</div>
-        `);
-
-        this.hide();
-        this.root.$ac_game.append(this.$playground);
-        this.start();
-    }
-
-    start() {
-
-    }
-
-    show() {
-        this.$playground.show();
-    }
-
-    hide() {
-        this.$playground.hide();
-    }
-}class AcGame {
-    constructor(id) {
-        console.log("AcGame Container");
-
-        this.id = id;
-        this.$ac_game = $('#' + id);
-        this.menu = new AcGameMenu(this);
-        this.playground = new AcGamePlayGround(this);
-
-
-        this.start();
-    }
-
-    start() {
-
-    }
 }
