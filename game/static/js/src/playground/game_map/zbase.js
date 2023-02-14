@@ -21,7 +21,7 @@ class GameMap extends AcGameObject {
     }
 
     render() {
-        this.ctx.fillStyle = "rgba(0,0,0,0.1)"
+        this.ctx.fillStyle = "rgba(0,0,0,0.25)"
         this.ctx.fillRect(0, 0,
             this.ctx.canvas.width, this.ctx.canvas.height);
     }
