@@ -28,6 +28,11 @@ class AcGamePlayGround {
         this.start();
     }
 
+    get_random_color() {
+        let colors = ["blue", "red", "pink", "grey", "green"];
+        return colors[Math.floor(Math.random() * 5)];
+    }
+
     start() {
 
     }
