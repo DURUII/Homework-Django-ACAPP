@@ -18,7 +18,7 @@ class AcGameObject {
 
     destory() {
         this.on_destroy();
-        for (let i = 0; i < AC_GAME_OBJECTS; i++) {
+        for (let i = 0; i < AC_GAME_OBJECTS.length; i++) {
             if (AC_GAME_OBJECTS[i] === this) {
                 AC_GAME_OBJECTS.splice(i, 1);
                 break;
