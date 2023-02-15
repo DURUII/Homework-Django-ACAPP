@@ -223,11 +223,12 @@ requestAnimationFrame(AC_GAME_ANIMATION);class GameMap extends AcGameObject {
             return false;
         });
         this.playground.game_map.$canvas.mousedown(function (e) {
+            const rect = outer.ctx.canvas.getBoundingClientRect();
             if (e.which === 3) {
-                outer.move_to(e.clientX, e.clientY);
+                outer.move_to(e.clientX - rect.left, e.clientY - rect.top);
             } else if (e.which === 1) {
                 if (outer.cur_skill === "fireball") {
-                    outer.shoot_fireball(e.clientX, e.clientY);
+                    outer.shoot_fireball(e.clientX - rect.left, e.clientY - rect.top);
                 }
 
                 outer.cur_skill = null;
@@ -446,7 +447,23 @@ class AcGamePlayGround {
 </div>
         `);
 
-        // this.hide();
+        this.hide();
+
+        this.start();
+    }
+
+    get_random_color() {
+        let colors = ["blue", "red", "pink", "grey", "green"];
+        return colors[Math.floor(Math.random() * 5)];
+    }
+
+    start() {
+
+    }
+
+    show() {
+        this.$playground.show();
+
         this.root.$ac_game.append(this.$playground);
         this.width = this.$playground.width();
         this.height = this.$playground.height();
@@ -463,21 +480,6 @@ class AcGamePlayGround {
                 this, this.width / 2, this.height / 2, this.height * 0.05,
                 getRandomColor, this.height * 0.15, false))
         }
-
-        this.start();
-    }
-
-    get_random_color() {
-        let colors = ["blue", "red", "pink", "grey", "green"];
-        return colors[Math.floor(Math.random() * 5)];
-    }
-
-    start() {
-
-    }
-
-    show() {
-        this.$playground.show();
     }
 
     hide() {
@@ -489,7 +491,7 @@ class AcGamePlayGround {
 
         this.id = id;
         this.$ac_game = $('#' + id);
-        // this.menu = new AcGameMenu(this);
+        this.menu = new AcGameMenu(this);
         this.playground = new AcGamePlayGround(this);
 
 

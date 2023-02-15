@@ -7,7 +7,23 @@ class AcGamePlayGround {
 </div>
         `);
 
-        // this.hide();
+        this.hide();
+
+        this.start();
+    }
+
+    get_random_color() {
+        let colors = ["blue", "red", "pink", "grey", "green"];
+        return colors[Math.floor(Math.random() * 5)];
+    }
+
+    start() {
+
+    }
+
+    show() {
+        this.$playground.show();
+
         this.root.$ac_game.append(this.$playground);
         this.width = this.$playground.width();
         this.height = this.$playground.height();
@@ -24,21 +40,6 @@ class AcGamePlayGround {
                 this, this.width / 2, this.height / 2, this.height * 0.05,
                 getRandomColor, this.height * 0.15, false))
         }
-
-        this.start();
-    }
-
-    get_random_color() {
-        let colors = ["blue", "red", "pink", "grey", "green"];
-        return colors[Math.floor(Math.random() * 5)];
-    }
-
-    start() {
-
-    }
-
-    show() {
-        this.$playground.show();
     }
 
     hide() {
