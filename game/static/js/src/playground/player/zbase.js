@@ -28,7 +28,7 @@ class Player extends AcGameObject {
             return false;
         });
         this.playground.game_map.$canvas.mousedown(function (e) {
-            if (e.which === 1 || e.which === 3) {
+            if (e.which === 3) {
                 outer.move_to(e.clientX, e.clientY);
                 // console.log(e.clientX, e.clientY);
             }
@@ -47,7 +47,7 @@ class Player extends AcGameObject {
         // console.log(this.move_length);
         let angle = Math.atan2(ty - this.y, tx - this.x);
         this.vx = Math.cos(angle);
-        this.vy = Math.sign(angle);
+        this.vy = Math.sin(angle);
     }
 
     update() {

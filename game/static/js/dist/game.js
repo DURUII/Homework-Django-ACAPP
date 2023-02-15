@@ -176,7 +176,7 @@ requestAnimationFrame(AC_GAME_ANIMATION);class GameMap extends AcGameObject {
         // console.log(this.move_length);
         let angle = Math.atan2(ty - this.y, tx - this.x);
         this.vx = Math.cos(angle);
-        this.vy = Math.sign(angle);
+        this.vy = Math.sin(angle);
     }
 
     update() {
