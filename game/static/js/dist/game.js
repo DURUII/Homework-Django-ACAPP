@@ -147,7 +147,7 @@ requestAnimationFrame(AC_GAME_ANIMATION);class GameMap extends AcGameObject {
         this.is_me = is_me;
         this.eps = 0.1;
 
-        this.friction = 0.1;
+        this.friction = 0.9;
 
         this.move_length = 0;
 
@@ -227,11 +227,13 @@ requestAnimationFrame(AC_GAME_ANIMATION);class GameMap extends AcGameObject {
         this.damage_x = Math.cos(angle);
         this.damage_y = Math.sin(angle);
 
-        this.damage_speed = damage * 2;
+        this.damage_speed = damage * 100;
+        
+        this.speed *= 2;
     }
 
     update() {
-        if (this.damage_speed > this.eps) {
+        if (this.damage_speed > 10) {
             this.vx = this.vy = 0;
             this.move_length = 0;
 
@@ -362,10 +364,11 @@ class AcGamePlayGround {
             "white", this.height * 0.15, true
         ));
 
-        for (let i = 0; i < 1; i++) {
+        for (let i = 0; i < 10; i++) {
+            let getRandomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
             this.players.push(new Player(
                 this, this.width / 2, this.height / 2, this.height * 0.05,
-                "blue", this.height * 0.15, false))
+                getRandomColor, this.height * 0.15, false))
         }
 
         this.start();
