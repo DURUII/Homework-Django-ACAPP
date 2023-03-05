@@ -2,16 +2,19 @@ class AcGameMenu {
     constructor(root) {
         console.log("Menu");
 
+
         this.root = root;
         this.$menu = $(`
 <div class="ac-game-menu">
     <div class="ac-game-menu-field">
         <div class="ac-game-menu-field-item ac-game-menu-field-item-single-mode">单人模式</div>
         <div class="ac-game-menu-field-item ac-game-menu-field-item-multi-mode">多人模式</div>
-        <div class="ac-game-menu-field-item ac-game-menu-field-item-settings"> 设  置 </div>
+        <div class="ac-game-menu-field-item ac-game-menu-field-item-settings"> 退  出 </div>
     </div>
 </div>
         `);
+
+        this.$menu.hide();
 
         this.root.$ac_game.append(this.$menu);
         this.$single_mode = this.$menu.find('.ac-game-menu-field-item-single-mode');
@@ -38,7 +41,9 @@ class AcGameMenu {
         });
 
         this.$settings.click(function () {
-            console.log("settings clicked");
+            // 借用
+
+            outer.root.settings.logout_on_remote();
         });
     }
 
