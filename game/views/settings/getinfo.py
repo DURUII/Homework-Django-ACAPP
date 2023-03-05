@@ -18,7 +18,7 @@ def getinfo_web(request):
     if not user.is_authenticated:
         return JsonResponse({"result": "未登陆"})
     else:
-        player = Player.objects.all()[0]
+        player = Player.objects.get(user=user)
         return JsonResponse(
             {
                 "result": "success",
