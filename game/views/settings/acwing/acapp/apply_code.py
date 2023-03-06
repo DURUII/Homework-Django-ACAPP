@@ -4,6 +4,8 @@ from random import randint
 
 from django.core.cache import cache
 
+from game.rich_console import console
+
 
 def get_state():
     res = ""
@@ -16,18 +18,22 @@ def apply_code(request):
     appid = "4927"
     # FIXME note it is receive code
     redirect_uri = quote(
-        "https://app4927.acapp.acwing.com.cn/settings/acwing/web/receive_code/"
+        "https://app4927.acapp.acwing.com.cn/settings/acwing/acapp/receive_code/"
     )
     scope = "userinfo"
     state = get_state()
 
+    console.print(f"[blue]{state}[/blue]")
+
     cache.set(state, True, 7200)
 
-    apply_code_url = "https://www.acwing.com/third_party/api/oauth2/web/authorize/"
+    #  不需要返回连接
     return JsonResponse(
         {
             "result": "success",
-            "apply_code_url": apply_code_url
-            + f"?appid={appid}&redirect_uri={redirect_uri}&scope={scope}&state={state}",
+            "appid": appid,
+            "redirect_uri": redirect_uri,
+            "scope": scope,
+            "state": state,
         }
     )

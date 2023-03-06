@@ -3,22 +3,40 @@ from game.rich_console import console
 from django.core.cache import cache
 import requests
 
+from django.http import JsonResponse
+
 from django.contrib.auth.models import User
 from game.models.player.player import Player
 from django.contrib.auth import login
 
+
+from game.rich_console import console
 from random import randint
 
 
 def receive_code(request):
     data = request.GET
+
+    if "errcode" in data:
+        return JsonResponse(
+            {
+                "result": "apply failed",
+                "errcode": data["errcode"],
+                "errmsg": data["errmsg"],
+            }
+        )
+
     code = data.get("code")
     state = data.get("state")
 
-    console.print(f"[red] {code}, {state} [/red]")
+    console.print(f"[red]{state}[/red]")
 
     if not cache.has_key(state):
-        return redirect("index")
+        return JsonResponse(
+            {
+                "result": "state not exist",
+            }
+        )
     cache.delete(state)
 
     apply_access_token_url = (
@@ -36,8 +54,15 @@ def receive_code(request):
 
     players = Player.objects.filter(openid=openid)
     if players.exists():
-        login(request, players[0].user)
-        return redirect("index")
+        # login(request, players[0].user)
+        player = players[0]
+        return JsonResponse(
+            {
+                "result": "success",
+                "username": player.user.username,
+                "photo": player.photo,
+            }
+        )
 
     get_userinfo_url = "https://www.acwing.com/third_party/api/meta/identity/getinfo/"
     params = {
@@ -55,6 +80,10 @@ def receive_code(request):
     user = User.objects.create(username=username)
     player = Player.objects.create(user=user, photo=photo, openid=openid)
 
-    login(request, user)
-
-    return redirect("index")
+    return JsonResponse(
+        {
+            "result": "success",
+            "username": player.user.username,
+            "photo": player.photo,
+        }
+    )

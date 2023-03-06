@@ -5,7 +5,9 @@ export class AcGame {
 
         this.id = id;
         this.$ac_game = $('#' + id);
-        
+
+        console.log(AcWingOS);
+
         this.AcWingOS = AcWingOS;
 
 
