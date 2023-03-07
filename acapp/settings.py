@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["123.249.114.69", "app4927.acapp.acwing.com.cn"]
 # Application definition
 
 INSTALLED_APPS = [
+    "channels",
     "game.apps.GameConfig",
     "polls.apps.PollsConfig",
     "django.contrib.admin",
@@ -140,3 +141,16 @@ CACHES = {
 }
 
 USER_AGENTS_CACHE = "default"
+
+ASGI_APPLICATION = "acapp.asgi.application"
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("127.0.0.1", 6379)],
+        },
+    },
+}
+
+
+ROOM_CAPACITY = 3

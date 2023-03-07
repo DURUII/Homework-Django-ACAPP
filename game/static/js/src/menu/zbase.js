@@ -33,11 +33,13 @@ class AcGameMenu {
         this.$single_mode.click(function () {
             console.log("single-mode clicked");
             outer.hide();
-            outer.root.playground.show();
+            outer.root.playground.show("single mode");
         });
 
         this.$multi_mode.click(function () {
             console.log("multi-mode clicked");
+            outer.hide();
+            outer.root.playground.show("multi mode");
         });
 
         this.$settings.click(function () {
