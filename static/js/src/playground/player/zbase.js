@@ -79,7 +79,11 @@ class Player extends AcGameObject {
         this.playground.game_map.$canvas.on("contextmenu", function () {
             return false;
         });
+
+
         this.playground.game_map.$canvas.mousedown(function (e) {
+
+
             if (outer.playground.state !== "fighting")
                 return true;
 
@@ -134,7 +138,22 @@ class Player extends AcGameObject {
 
 
 
-        $(window).keydown(function (e) {
+        this.playground.game_map.$canvas.keydown(function (e) {
+            if (e.which === 13) {//enter
+                if (outer.playground.mode === "multi mode") {
+                    outer.playground.chat_field.show_input();
+                    return false;
+                }
+            } else if (e.which === 27) {//esc
+                if (outer.playground.mode === "multi mode") {
+                    outer.playground.chat_field.hide_input();
+                    return false;
+                }
+            }
+
+
+
+
             if (outer.playground.state !== "fighting")
                 return true;
 
