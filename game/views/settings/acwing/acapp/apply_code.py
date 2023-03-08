@@ -23,8 +23,6 @@ def apply_code(request):
     scope = "userinfo"
     state = get_state()
 
-    console.print(f"[blue]{state}[/blue]")
-
     cache.set(state, True, 7200)
 
     #  不需要返回连接

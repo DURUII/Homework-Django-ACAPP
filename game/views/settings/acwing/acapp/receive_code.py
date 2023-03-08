@@ -29,8 +29,6 @@ def receive_code(request):
     code = data.get("code")
     state = data.get("state")
 
-    console.print(f"[red]{state}[/red]")
-
     if not cache.has_key(state):
         return JsonResponse(
             {

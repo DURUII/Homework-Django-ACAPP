@@ -1,6 +1,5 @@
 class AcGameMenu {
     constructor(root) {
-        console.log("Menu");
 
 
         this.root = root;
@@ -31,13 +30,11 @@ class AcGameMenu {
     add_listening_events() {
         let outer = this;
         this.$single_mode.click(function () {
-            console.log("single-mode clicked");
             outer.hide();
             outer.root.playground.show("single mode");
         });
 
         this.$multi_mode.click(function () {
-            console.log("multi-mode clicked");
             outer.hide();
             outer.root.playground.show("multi mode");
         });

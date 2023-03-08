@@ -15,8 +15,6 @@ def receive_code(request):
     code = data.get("code")
     state = data.get("state")
 
-    console.print(f"[red] {code}, {state} [/red]")
-
     if not cache.has_key(state):
         return redirect("index")
     cache.delete(state)
