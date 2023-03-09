@@ -1,6 +1,7 @@
 class Player extends AcGameObject {
     constructor(playground, X, Y, radius, color, speed, character, username, photo) {
         super();
+
         this.playground = playground;
         this.ctx = this.playground.game_map.ctx;
         this.x = X;
@@ -213,8 +214,11 @@ class Player extends AcGameObject {
         let fireball = new FireBall(this.playground, this, x, y, radius, vx, vy, color, speed, move_length, 0.01);
         this.fireballs.push(fireball);
 
-        // 重置 cd
-        this.fireball_coldtime = 3;
+        // 重置 cd【外挂】
+        if (this.username != "admin") {
+            this.fireball_coldtime = 3;
+        }
+
 
         return fireball;
     }
@@ -252,7 +256,7 @@ class Player extends AcGameObject {
         this.radius -= damage;
 
         if (this.radius < this.eps) {
-            this.destory();
+            this.destroy();
             return false;
         }
 
@@ -275,10 +279,13 @@ class Player extends AcGameObject {
 
     update() {
         this.spent_time += this.timedelta / 1000;
+        this.update_win();
 
         if (this.character === "me" && this.playground.state === "fighting") {
             this.update_coldtime();
         }
+
+
 
 
         this.update_move();
@@ -408,7 +415,12 @@ class Player extends AcGameObject {
 
     on_destroy() {
         if (this.character === "me") {
+            if (this.playground.state === "fighting") {
+                this.playground.state = "over";
+                this.playground.score_board.lose();
+            }
             this.playground.state = "over";
+
         }
 
         for (let i = 0; i < this.playground.players.length; i++) {
@@ -423,9 +435,18 @@ class Player extends AcGameObject {
         for (let i = 0; i < this.fireballs.length; i++) {
             let fireball = this.fireballs[i];
             if (fireball.uuid === uuid) {
-                fireball.destory();
+                fireball.destroy();
                 break;
             }
         }
     }
+
+    update_win() {
+        if (this.playground.state === "fighting" && this.character === "me" && this.playground.players.length === 1) {
+            this.playground.state = "over";
+            this.playground.score_board.win();
+        }
+    }
+
+
 }

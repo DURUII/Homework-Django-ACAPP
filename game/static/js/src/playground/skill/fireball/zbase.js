@@ -23,7 +23,7 @@ class FireBall extends AcGameObject {
 
     update() {
         if (this.move_length < this.eps) {
-            this.destory();
+            this.destroy();
             return false;
         }
 
@@ -78,7 +78,7 @@ class FireBall extends AcGameObject {
             this.playground.mps.send_attack(player.uuid, player.x, player.y, angle, damage, this.uuid);
         }
 
-        this.destory();
+        this.destroy();
     }
 
     render() {

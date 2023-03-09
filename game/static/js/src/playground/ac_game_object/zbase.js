@@ -20,14 +20,18 @@ class AcGameObject {
     }
 
     start() {
-        
+
     }
 
     update() {
 
     }
 
-    destory() {
+    late_update() {
+
+    }
+
+    destroy() {
         this.on_destroy();
         for (let i = 0; i < AC_GAME_OBJECTS.length; i++) {
             if (AC_GAME_OBJECTS[i] === this) {
@@ -54,6 +58,11 @@ let AC_GAME_ANIMATION = function (timestamp) {
             obj.timedelta = timestamp - last_timestamp;
             obj.update();
         }
+    }
+
+    for (let i = 0; i < AC_GAME_OBJECTS.length; i++) {
+        let obj = AC_GAME_OBJECTS[i];
+        obj.late_update();
     }
 
     last_timestamp = timestamp;
