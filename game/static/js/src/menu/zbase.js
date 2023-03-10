@@ -4,13 +4,23 @@ class AcGameMenu {
 
         this.root = root;
         this.$menu = $(`
-<div class="ac-game-menu">
-    <div class="ac-game-menu-field">
-        <div class="ac-game-menu-field-item ac-game-menu-field-item-single-mode">单人模式</div>
-        <div class="ac-game-menu-field-item ac-game-menu-field-item-multi-mode">多人模式</div>
-        <div class="ac-game-menu-field-item ac-game-menu-field-item-settings"> 退  出 </div>
-    </div>
-</div>
+        <!-- body -->
+        <div class="ac-game-menu">
+            <!-- ul -->
+            <div class="ac-game-menu-field">
+                <!-- li -->
+                <div class="ac-game-menu-field-item ac-game-menu-field-item-single-mode" style="--i:3;">
+                    <!-- a -->
+                    <span>单机模式</span>
+                </div>
+                <div class="ac-game-menu-field-item ac-game-menu-field-item-multi-mode" style="--i:2;">
+                    <span>联机模式</span>
+                </div>
+                <div class="ac-game-menu-field-item ac-game-menu-field-item-settings" style="--i:1;">
+                    <span>退出游戏</span>
+                </div>
+            </div>
+        </div>
         `);
 
         this.$menu.hide();

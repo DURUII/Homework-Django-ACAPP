@@ -1,153 +1,243 @@
-body {
-    margin: 0px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
+/* 菜单界面 */
 .ac-game-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #434750;
+    background-size: 100% 100%;
     width: 100%;
     height: 100%;
-    background-image: url("/static/image/menu/background.gif");
-    background-size: 100% 100%;
     user-select: none;
 }
 
 .ac-game-menu-field {
-    width: 20vw;
     position: relative;
-    top: 40%;
-    left: 12%;
+    transform: skewY(-15deg);
 }
 
-.ac-game-menu-field-item {
-    color: whitesmoke;
-    height: 4vw;
-    line-height: 4vw;
-    width: 18vw;
-    font-size: 4vh;
-    font-style: italic;
-    margin: 2vh;
-    text-align: center;
-    background-color: rgba(39, 21, 28, 0.6);
-    border-radius: 10px;
-    letter-spacing: 0.5vw;
+.ac-game-menu-field .ac-game-menu-field-item {
+    position: relative;
+    list-style: none;
+    width: 25vw;
+    padding: 3vh;
+    font-size: 2.5vh;
+    margin: 1vh;
+    background: #3e3f46;
+    z-index: calc(1 * var(--i));
+    transition: 0.5s;
     cursor: pointer;
 }
 
-.ac-game-menu-field-item:hover {
-    transform: scale(1.2);
-    transition: 100ms;
+.ac-game-menu-field .ac-game-menu-field-item:hover {
+    background: #33ee58;
+    transform: translateX(-50px);
 }
 
-.ac-game-playground {
-    width: 100%;
+.ac-game-menu-field .ac-game-menu-field-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
     height: 100%;
-    user-select: none;
-
-    background-color: grey;
+    background: #2e3133;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
 }
 
-.ac-game-playground>canvas {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.ac-game-menu-field .ac-game-menu-field-item:hover::before {
+    background: #1f782c;
+}
+
+.ac-game-menu-field .ac-game-menu-field-item::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+    background: #35383e;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+
+.ac-game-menu-field .ac-game-menu-field-item:hover::after {
+    background: #29b941;
+}
+
+.ac-game-menu-field .ac-game-menu-field-item span {
+    text-decoration: none;
+    color: #999;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.ac-game-menu-field .ac-game-menu-field-item:hover span {
+    color: #fff;
+}
+
+.ac-game-menu-field .ac-game-menu-field-item:last-child::after {
+    box-shadow: -120px 120px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* 登录界面 */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+    user-select: none;
 }
 
 .ac-game-settings {
-    width: 100%;
-    height: 100%;
-    background-image: url("/static/image/menu/background.gif");
-    background-size: 100% 100%;
-    user-select: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background: #000;
 }
 
-.ac-game-settings-login {
-    height: 45vh;
-    width: 20vw;
+.ac-game-settings::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#000, #0f0, #000);
+    animation: animate 5s linear infinite;
+}
 
+@keyframes animate {
+    0% {
+        transform: translateY(-100%);
+
+    }
+
+    100% {
+        transform: translateY(100%);
+
+    }
+}
+
+.ac-game-settings-neon {
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    width: calc(6.25vw - 2px);
+    height: calc(6.25vw - 2px);
+    background: #181818;
+    z-index: 2;
+    transition: 1.2s;
+}
 
-    background-color: rgba(39, 21, 28, 0.6);
+.ac-game-settings-neon:hover {
+    background: #0f0;
+    transition: 0s;
+}
 
-    border-radius: 5px;
+.ac-game-settings-login,
+.ac-game-settings-register {
+    position: absolute;
+    width: 30vw;
+
+    background: #222;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 8px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.ac-game-settings-login-content,
+.ac-game-settings-register-content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
 .ac-game-settings-title {
-    color: white;
-    font-size: 3vh;
-    text-align: center;
-    padding-top: 2vh;
-    margin-bottom: 2vh;
+    font-size: 2em;
+    color: #0f0;
 }
 
-.ac-game-settings-username {
-    display: block;
-    height: 7vh;
-}
-
-.ac-game-settings-password {
-    display: block;
-    height: 7vh;
-}
-
+.ac-game-settings-username,
+.ac-game-settings-password,
 .ac-game-settings-submit {
-    display: block;
-    height: 7vh;
-}
-
-.ac-game-settings-acwing {
-    display: block;
-    height: 7vh;
-}
-
-.ac-game-settings-item {
     width: 100%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
-.ac-game-settings-item>input {
-    line-height: 3vh;
-    width: 90%;
-
+.ac-game-settings-item input {
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.ac-game-settings-item>button {
-    color: white;
-    line-height: 3vh;
-    width: 90%;
-
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    background-color: #5cb85c;
-    border-color: #4cae4c;
-
+    width: 100%;
+    background: #333;
+    border: none;
+    outline: none;
+    padding: 25px 10px 7.5px;
     border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.ac-game-settings-item i {
+    position: absolute;
+    left: 0;
+    padding: 15px 10px;
+    font-style: normal;
+    color: #aaa;
+    transition: 0.15s;
+    pointer-events: none;
+}
+
+.ac-game-settings-item input:focus~i,
+.ac-game-settings-item input:valid~i {
+    transform: translateY(-7.5px);
+    font-size: 0.7em;
+    color: #fff;
+}
+
+.ac-game-settings-links {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .ac-game-settings-error-message {
-    color: red;
-    font-size: 1.5vh;
-    display: inline;
-    float: left;
-
-    padding-left: 1vh;
+    color: #f00;
+    text-decoration: none;
 }
 
 .ac-game-settings-option {
-    color: white;
-    font-size: 2vh;
-    display: inline;
-    float: right;
-    padding-right: 1vh;
+    color: #0f0;
+    text-decoration: none;
     cursor: pointer;
 }
 
@@ -160,43 +250,51 @@ body {
     display: block;
 }
 
-.ac-game-settings-acwing>div {
-    text-align: center;
-    color: white;
-    font-size: 1.5vh;
-    display: block;
+.ac-game-settings-submit input {
+    padding: 10px;
+    background: #0f0;
+    color: #111;
+    font-weight: 600;
+    font-size: 1.25em;
+    letter-spacing: 0.05em;
+    cursor: pointer;
 }
 
+.ac-game-settings-acwing>div {
+    font-size: 0.75em;
+    color: #aaa;
+    text-decoration: none;
+}
 
+@media(max-width: 900px) {
+    .ac-game-settings-neon {
+        width: calc(10vw - 2px);
+        height: calc(10vw - 2px);
+    }
+}
 
+@media(max-width: 600px) {
+    .ac-game-settings-neon {
+        width: calc(20vw - 2px);
+        height: calc(20vw - 2px);
+    }
+}
 
+/* 游戏界面 */
+.ac-game-playground {
+    width: 100%;
+    height: 100%;
+    user-select: none;
 
+    background-color: #434750;
+}
 
-
-
-
-.ac-game-settings-register {
-    height: 52vh;
-    width: 20vw;
-
+.ac-game-playground>canvas {
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    background-color: rgba(39, 21, 28, 0.6);
-
-    border-radius: 5px;
 }
-
-
-
-
-
-
-
-
-
 
 .ac-game-chat-field-history {
     position: absolute;
@@ -208,7 +306,7 @@ body {
     width: 20%;
     height: 32%;
 
-    color: white;
+    color: #fff;
     font-size: 2vh;
 
     padding: 5px;
@@ -228,7 +326,7 @@ body {
     width: 20%;
     height: 3vh;
 
-    color: white;
+    color: #fff;
     font-size: 2vh;
 
     background-color: rgba(222, 225, 230, 0.2);

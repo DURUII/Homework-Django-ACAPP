@@ -15,10 +15,10 @@ def get_state():
 
 
 def apply_code(request):
-    appid = "4927"
+    appid = "4986"
     # FIXME note it is receive code
     redirect_uri = quote(
-        "https://app4927.acapp.acwing.com.cn/settings/acwing/acapp/receive_code/"
+        "https://app4986.acapp.acwing.com.cn/settings/acwing/acapp/receive_code/"
     )
     scope = "userinfo"
     state = get_state()

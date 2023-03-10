@@ -9,89 +9,477 @@ class Settings {
 
 
         this.$settings = $(`
-<div class="ac-game-settings">
-    <div class="ac-game-settings-login">
-        <div class="ac-game-settings-title">登陆</div>
+        <!-- section -->
+        <section>
+            <div class="ac-game-settings">
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
+                <span class="ac-game-settings-neon"></span>
 
-        <div class="ac-game-settings-username">
-            <div class="ac-game-settings-item"><input type="text" placeholder="用户名"></div>
-        </div>
-
-        <div class="ac-game-settings-password">
-            <div class="ac-game-settings-item"><input type="password" placeholder="密码"></div>
-        </div>
-
-        <div class="ac-game-settings-submit">
-            <div class="ac-game-settings-item"><button>登陆</button></div>
-        </div>
-
-        <div class="ac-game-settings-error-message">
-        </div>
-
-        <div class="ac-game-settings-option">
-            注册
-        </div>
-
-        <br>
-
-        <div>
-            <div class="ac-game-settings-acwing">
-                <img src="https://app4927.acapp.acwing.com.cn/static/image/settings/acwing_logo.png" width="30">
-                <br>
-                <div>AcWing一键登陆</div>
-            </div>
-        </div>
-
-    </div>
 
 
+                <!-- signin -->
+                <div class="ac-game-settings-login" style="display: none;">
+                    <!-- content -->
+                    <div class="ac-game-settings-login-content">
+
+                        <!-- h2 -->
+                        <div class="ac-game-settings-title">SIGN IN</div>
+
+                        <!-- form -->
+                        <div class="ac-game-settings-username">
+                            <!-- inputBx -->
+                            <div class="ac-game-settings-item">
+                                <input type="text" required>
+                                <i>用户名</i>
+                            </div>
+                        </div>
+
+                        <div class="ac-game-settings-password">
+                            <div class="ac-game-settings-item">
+                                <input type="password" required>
+                                <i>密码</i>
+                            </div>
+                        </div>
+
+                        <!-- links -->
+                        <div class="ac-game-settings-links">
+                            <span class="ac-game-settings-error-message">
+                            </span>
+
+                            <span class="ac-game-settings-option">
+                                注册
+                            </span>
+                        </div>
+
+                        <!-- inputBx -->
+                        <div class="ac-game-settings-submit">
+                            <div class="ac-game-settings-item">
+                                <input type="submit" value="登录">
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="ac-game-settings-acwing">
+                                <img src="https://app4986.acapp.acwing.com.cn/static/image/settings/acwing_logo.png"
+                                    width="30">
+                                <div>AcWing一键登陆</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
 
 
 
 
-    <div class="ac-game-settings-register">
-        <div class="ac-game-settings-title">注册</div>
 
-        <div class="ac-game-settings-username">
-            <div class="ac-game-settings-item"><input type="text" placeholder="用户名"></div>
-        </div>
 
-        <div class="ac-game-settings-password ac-game-settings-password-first">
-            <div class="ac-game-settings-item"><input type="password" placeholder="密码"></div>
-        </div>
+                <div class="ac-game-settings-register">
+                    <div class="ac-game-settings-register-content">
 
-        <div class="ac-game-settings-password ac-game-settings-password-second">
-            <div class="ac-game-settings-item"><input type="password" placeholder="确认密码"></div>
-        </div>
+                        <div class="ac-game-settings-title">SIGN UP</div>
 
-        <div class="ac-game-settings-submit">
-            <div class="ac-game-settings-item"><button>注册</button></div>
-        </div>
+                        <div class="ac-game-settings-username">
+                            <div class="ac-game-settings-item">
+                                <input type="text" required>
+                                <i>用户名</i>
+                            </div>
+                        </div>
 
-        <div class="ac-game-settings-error-message">
-        </div>
+                        <div class="ac-game-settings-password ac-game-settings-password-first">
+                            <div class="ac-game-settings-item">
+                                <input type="password" required>
+                                <i>密码</i>
+                            </div>
+                        </div>
 
-        <div class="ac-game-settings-option">
-            登陆
-        </div>
+                        <div class="ac-game-settings-password ac-game-settings-password-second">
+                            <div class="ac-game-settings-item">
+                                <input type="password" required>
+                                <i>确认密码</i>
+                            </div>
+                        </div>
 
-        <br>
+                        <div class="ac-game-settings-links">
+                            <span class="ac-game-settings-error-message">
+                            </span>
 
-        <div>
-            <div class="ac-game-settings-acwing">
-                <img src="https://app4927.acapp.acwing.com.cn/static/image/settings/acwing_logo.png" width="30">
-                <br>
-                <div>AcWing一键登陆</div>
-            </div>
-        </div>
-    </div>
-</div>
+                            <span class="ac-game-settings-option">
+                                登录
+                            </span>
+                        </div>
+
+                        <div class="ac-game-settings-submit">
+                            <div class="ac-game-settings-item">
+                                <input type="submit" value="注册">
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <div class="ac-game-settings-acwing">
+                                <img src="https://app4986.acapp.acwing.com.cn/static/image/settings/acwing_logo.png"
+                                    width="30">
+                                <div>AcWing一键登陆</div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+        </section>
 `);
 
         this.$login = this.$settings.find(".ac-game-settings-login");
         this.$login_username = this.$login.find(".ac-game-settings-username input");
         this.$login_password = this.$login.find(".ac-game-settings-password input");
-        this.$login_submit = this.$login.find(".ac-game-settings-submit button");
+        this.$login_submit = this.$login.find(".ac-game-settings-submit input");
         this.$login_error_message = this.$login.find(".ac-game-settings-error-message");
         this.$login_register = this.$login.find(".ac-game-settings-option");
 
@@ -102,7 +490,7 @@ class Settings {
         this.$register_username = this.$register.find(".ac-game-settings-username input");
         this.$register_password = this.$register.find(".ac-game-settings-password-first input");
         this.$register_password_confirm = this.$register.find(".ac-game-settings-password-second input");
-        this.$register_submit = this.$register.find(".ac-game-settings-submit button");
+        this.$register_submit = this.$register.find(".ac-game-settings-submit input");
         this.$register_error_message = this.$register.find(".ac-game-settings-error-message");
         this.$register_login = this.$register.find(".ac-game-settings-option");
 
@@ -129,7 +517,7 @@ class Settings {
 
     acwing_login() {
         $.ajax({
-            url: "https://app4927.acapp.acwing.com.cn/settings/acwing/web/apply_code/",
+            url: "https://app4986.acapp.acwing.com.cn/settings/acwing/web/apply_code/",
             type: "GET",
             success: function (resp) {
                 if (resp.result === "success") {
@@ -189,7 +577,7 @@ class Settings {
         this.$login_error_message.empty();
 
         $.ajax({
-            url: "https://app4927.acapp.acwing.com.cn/settings/login/",
+            url: "https://app4986.acapp.acwing.com.cn/settings/login/",
             type: "GET",
             data: {
                 username: username,
@@ -216,7 +604,7 @@ class Settings {
         this.$register_error_message.empty();
 
         $.ajax({
-            url: "https://app4927.acapp.acwing.com.cn/settings/register",
+            url: "https://app4986.acapp.acwing.com.cn/settings/register",
             type: "GET",
             data: {
                 username: username,
@@ -238,7 +626,7 @@ class Settings {
             this.root.AcWingOS.api.window.close();
         } else {
             $.ajax({
-                url: "https://app4927.acapp.acwing.com.cn/settings/logout/",
+                url: "https://app4986.acapp.acwing.com.cn/settings/logout/",
                 type: "GET",
                 success: function (resp) {
                     if (resp.result === "success") {
@@ -266,7 +654,7 @@ class Settings {
     getinfo_acapp() {
         let outer = this;
         $.ajax({
-            url: "https://app4927.acapp.acwing.com.cn/settings/acwing/acapp/apply_code/",
+            url: "https://app4986.acapp.acwing.com.cn/settings/acwing/acapp/apply_code/",
             type: "GET",
             success: function (resp) {
                 if (resp.result === "success") {
@@ -279,7 +667,7 @@ class Settings {
     getinfo_web() {
         let outer = this;
         $.ajax({
-            url: "https://app4927.acapp.acwing.com.cn/settings/getinfo/",
+            url: "https://app4986.acapp.acwing.com.cn/settings/getinfo/",
             type: "GET",
             data: {
                 platform: outer.platform,
